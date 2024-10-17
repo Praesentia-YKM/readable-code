@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group = 'cleancode'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.2")
+    testImplementation("org.assertj:assertj-core:3.25.3")
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
